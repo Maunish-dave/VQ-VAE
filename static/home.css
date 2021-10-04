@@ -1,0 +1,65 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(20, 20, 20);
+
+}
+
+.main {
+    background-color: gray;
+    margin-top: 100px;
+    border: 5px solid yellow;
+    border-radius: 5px;
+}
+
+.main-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    max-width: 100%;
+    padding: 20px;
+}
+
+img {
+    width: 300px;
+    height:300px;
+}
+
+.image1 {
+    float: left;
+}
+
+.symbole {
+    float: left;
+    text-align: center;
+    width: 100px;
+    height: 100%;
+}
+
+.image2 {
+    float: right;
+}
+
+.form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 70%;
+    padding: 10px;
+    margin-left: 15%;
+}
+
+.generate {
+    padding: 10px;
+    color: white;
+    background-color: rgb(72, 167, 72);
+    border-radius: 2px;
+}
+
+.download {
+    padding: 10px;
+}
