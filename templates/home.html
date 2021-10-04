@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/home.css">
+
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <title>VQ VAE On Web</title>
+</head>
+
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                $('#image1')
+                    .attr('src', e.target.result)
+
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
+
+<body>
+    <div class="main">
+        <center><h2 style="color: white;">Demo for Reconstructing Images Using VQ-VAE</h2></center>
+        <div class="main-box">
+            <div class="image1">
+                <img id="image1" src="{{file_path1}}" alt="No Image">
+            </div>
+            <div class="symbole">
+                VQ VAE=>
+            </div>
+            <div class="image2">
+                <img src="{{file_path2}}" alt="No Image">
+            </div>
+        </div>
+
+        <form class="form" method="post" enctype="multipart/form-data">
+            <button class="generate " value="generate" name="generate " type="submit">Reconstruct</button>
+            <input class="file" name="file" type="file" onchange="readURL(this); ">
+            <button class="download" value="download" name="download"><a href="/download">Download</a></button>
+        </form>
+    </div>
+</body>
+
+
+</html>
